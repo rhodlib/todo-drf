@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 3rd Party
+    'rest_framework',
     # Local
     'todos.apps.TodosConfig',
 ]
@@ -125,3 +127,9 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ["https://8000-idx-todo-drf-1722700800648.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev"]
+
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
